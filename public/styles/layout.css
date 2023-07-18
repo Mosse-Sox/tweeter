@@ -22,7 +22,9 @@ body {
   font-size: 24px;
   font-family: "Source Sans 3", sans-serif;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 /*
@@ -31,5 +33,7 @@ body {
 
 main {
   width: 90%;
-  background-color: red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

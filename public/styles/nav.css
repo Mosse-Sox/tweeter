@@ -1,4 +1,4 @@
-nav {
+.nav {
   height: 120px;
   background-color: #4c7cd5;
   color: #ffffff;
@@ -8,6 +8,7 @@ nav {
   padding: 0.5em 1.5em;
   position: fixed;
   width: 100%;
+  top: 0;
 }
 
 #logo {
@@ -16,14 +17,14 @@ nav {
   margin: 0.2em 0em 0em;
 }
 
-nav a {
+.nav a {
   text-decoration: none;
   color: #ffffff;
   font-size: 30px;
   margin-top: 0.2em;
 }
 
-nav div {
+.nav div {
   display: flex;
   flex-direction: column;
   align-items: center;
