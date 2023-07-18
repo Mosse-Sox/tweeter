@@ -1,11 +1,13 @@
 nav {
   height: 120px;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: #4c7cd5;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.5em 1.5em;
+  position: fixed;
+  width: 100%;
 }
 
 #logo {
@@ -16,13 +18,13 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 30px;
   margin-top: 0.2em;
 }
 
 nav div {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
