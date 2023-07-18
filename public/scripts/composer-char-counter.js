@@ -1,16 +1,27 @@
 $(document).ready(function () {
-  console.log("Hello from Beansville!");
 
-  let count = $(".counter").html();
-  $("#tweet-text").on("input", (event) => {
-    if (count < 140 && !event.originalEvent.data) {
-      count++;
-      console.log(count);
-    } else if (event.originalEvent.data && count > 0) {
-      count--;
-      console.log(event.originalEvent.data);
+  
+  $(".new-tweet").on("input", (event) => {
+
+    const textareaElm = $(this).find("textarea#tweet-text");
+
+    const textareaValue = textareaElm.val();
+    const textareaLength = textareaValue.length; 
+
+    const charsLeft = 140 - textareaLength;
+
+    const counter = $(this).find(".counter");
+
+
+    
+    if (0 > charsLeft) {
+      console.log(charsLeft);
+      counter.css('color', '#FF0000');
+    } else {
+      counter.css('color', '#545149')
     }
 
-    $(".counter").html(count);
+    counter.html(charsLeft);
+    
   });
 });
