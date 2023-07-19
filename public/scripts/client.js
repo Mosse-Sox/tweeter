@@ -5,6 +5,8 @@
  */
 
 const createTweetElement = function (tweet) {
+  const tweetTimeAgo = new Date(tweet.created_at).toISOString();
+
   const $tweet = `<article>
   <header>
     <div>
@@ -18,7 +20,7 @@ const createTweetElement = function (tweet) {
 
   <hr />
   <footer>
-    <p>${tweet.created_at}</p>
+    <p class="timeago" title="${tweetTimeAgo}">${tweet.created_at}</p>
     <div>
       <i class="fa-solid fa-flag"></i>
       <i class="fa-solid fa-retweet"></i>
@@ -33,7 +35,7 @@ const createTweetElement = function (tweet) {
 const renderTweets = function (container, tweets) {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    container.append($tweet);
+    container.prepend($tweet);
   }
 };
 
@@ -67,4 +69,5 @@ $(document).ready(function () {
 
   // to add it to the page so we can make sure it's got all the right elements, classes, etc.
   renderTweets($container, tweets);
+  $(".timeago").timeago();
 });
