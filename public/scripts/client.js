@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const createTweetElement = function(tweet) {
+const createTweetElement = function (tweet) {
   const tweetTimeAgo = new Date(tweet.created_at).toISOString();
 
   const $tweet = `<article>
@@ -32,7 +32,7 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
-const renderTweets = function(container, tweets) {
+const renderTweets = function (container, tweets) {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     container.prepend($tweet);
@@ -64,14 +64,22 @@ const tweets = [
   },
 ];
 
-$(document).ready(function() {
+const postTweets = $(document).ready(function () {
   const $tweetContainer = $("#tweets-container");
-  const $container = $(".new-tweet");
 
-  $container.on("submit", function(event) {
+  $(".new-tweet").on("submit", function (event) {
     event.preventDefault();
 
-    console.log("submitted!");
+    const textareaElm = $(this).find("textarea#tweet-text");
+    const formData = $(textareaElm).serialize();
+
+    $.ajax({
+      method: "POST",
+      url: "/tweets",
+      data: formData,
+    }).then((response) => {
+      console.log(response);
+    });
   });
 
   renderTweets($tweetContainer, tweets);
