@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .new-tweet form {
@@ -25,7 +26,7 @@ form div {
 
 #tweet-text {
   border: none;
-  border-bottom: solid #141313;
+  border-bottom: 3px solid #545149;
   height: 100px;
   background-color: #f9e3c0;
   width: 100%;
