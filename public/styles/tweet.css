@@ -25,6 +25,7 @@
   padding: 0.5em 0.5em;
 }
 
+/* article header css */
 .existing-tweets article header div {
   display: flex;
   flex-direction: row;
@@ -43,8 +44,16 @@
   padding: 0;
   padding-top: 15px;
   margin: 0;
+  font-weight: 300;
 }
 
+.existing-tweets header p {
+  font-weight: 600;
+  margin-right: 10px;
+  color: #bbc0cb;
+}
+
+/* article content css */
 .existing-tweets article hr {
   width: 98%;
   border: 2px solid #545149;
@@ -56,6 +65,7 @@
   margin: 25px 0px;
 }
 
+/* article footer css */
 .existing-tweets footer {
   display: flex;
   flex-direction: row;
@@ -65,6 +75,16 @@
   padding: 5px 1em;
 }
 
+.existing-tweets footer div {
+  color: #4c7cd5;
+}
+
 .existing-tweets p {
   margin: 0;
+}
+
+/* Hover States */
+
+.existing-tweets:hover {
+  box-shadow: 10px 10px #5451492c;
 }
