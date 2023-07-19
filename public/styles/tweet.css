@@ -88,3 +88,7 @@
 .existing-tweets:hover {
   box-shadow: 10px 10px #5451492c;
 }
+
+.existing-tweets footer div i:hover {
+  color: #dfb128;
+}
