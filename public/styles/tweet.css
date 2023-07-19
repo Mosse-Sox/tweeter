@@ -1,32 +1,35 @@
-.existing-tweets {
+#tweets-container {
   width: 60%;
-  height: 200px;
+  height: 1000px;
   display: flex;
   flex-direction: column;
-  border: 3px solid #545149;
   margin: 15px;
 }
 
-.existing-tweets article {
+#tweets-container article {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 250px;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: space-between;
+  border: 3px solid #545149;
+  margin-bottom: 15px;
 }
 
-.existing-tweets article header {
+#tweets-container article header {
   background-color: #f9e3c0;
   background-image: none;
   flex-direction: row;
   width: 100%;
   height: 50px;
   justify-content: space-between;
-  padding: 0.5em 0.5em;
+  margin: 5px 0;
+  padding: 0 5px;
+  align-items: center;
 }
 
 /* article header css */
-.existing-tweets article header div {
+#tweets-container article header div {
   display: flex;
   flex-direction: row;
   width: 140px;
@@ -35,38 +38,38 @@
   margin: 0;
 }
 
-.existing-tweets img {
+#tweets-container img {
   height: 50px;
   width: 50px;
 }
 
-.existing-tweets h4 {
+#tweets-container h4 {
   padding: 0;
   padding-top: 15px;
   margin: 0;
   font-weight: 300;
 }
 
-.existing-tweets header p {
+#tweets-container header p {
   font-weight: 600;
   margin-right: 10px;
   color: #bbc0cb;
 }
 
 /* article content css */
-.existing-tweets article hr {
+#tweets-container article hr {
   width: 98%;
   border: 2px solid #545149;
   margin: 0 auto;
 }
 
-#tweet {
+.tweet {
   padding: 0px 1em;
   margin: 25px 0px;
 }
 
 /* article footer css */
-.existing-tweets footer {
+#tweets-container footer {
   display: flex;
   flex-direction: row;
   height: 25%;
@@ -75,20 +78,20 @@
   padding: 5px 1em;
 }
 
-.existing-tweets footer div {
+#tweets-container footer div {
   color: #4c7cd5;
 }
 
-.existing-tweets p {
+#tweets-container p {
   margin: 0;
 }
 
 /* Hover States */
 
-.existing-tweets:hover {
+#tweets-container article:hover {
   box-shadow: 10px 10px #5451492c;
 }
 
-.existing-tweets footer div i:hover {
+#tweets-container footer div i:hover {
   color: #dfb128;
 }
