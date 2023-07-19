@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
   const tweetTimeAgo = new Date(tweet.created_at).toISOString();
 
   const $tweet = `<article>
@@ -32,7 +32,7 @@ const createTweetElement = function (tweet) {
   return $tweet;
 };
 
-const renderTweets = function (container, tweets) {
+const renderTweets = function(container, tweets) {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     container.prepend($tweet);
@@ -64,10 +64,16 @@ const tweets = [
   },
 ];
 
-$(document).ready(function () {
-  const $container = $("#tweets-container");
+$(document).ready(function() {
+  const $tweetContainer = $("#tweets-container");
+  const $container = $(".new-tweet");
 
-  // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-  renderTweets($container, tweets);
+  $container.on("submit", function(event) {
+    event.preventDefault();
+
+    console.log("submitted!");
+  });
+
+  renderTweets($tweetContainer, tweets);
   $(".timeago").timeago();
 });
