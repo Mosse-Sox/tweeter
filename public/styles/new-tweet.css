@@ -9,7 +9,7 @@
 .new-tweet form {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 100%;
   margin-top: 40px;
 }
 
@@ -28,7 +28,7 @@ form div {
 #tweet-text {
   border: none;
   border-bottom: 3px solid #545149;
-  height: 60px;
+  height: 40px;
   background-color: #f9e3c0;
   width: 100%;
   resize: none;
@@ -48,4 +48,8 @@ form div {
 
 div output {
   font-family: Bungee;
+}
+
+#tweet-text::placeholder {
+  font-weight: 600;
 }
