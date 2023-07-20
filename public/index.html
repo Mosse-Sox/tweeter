@@ -52,7 +52,9 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav class="nav">
-      <span id="logo">tweeter</span>
+      <div class="logobox">
+        <h1 id="logo">tweeter</h1>
+      </div>
       <div>
         <a href="" id="tweet-toggle"><strong>Write</strong> a new tweet</a>
         <i class="fa-solid fa-angles-down" id="write-new-tweet-arrow"></i>
@@ -73,8 +75,11 @@
       <section class="new-tweet">
         <p class="error"></p>
         <form method="POST" action="/tweets">
-          
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <textarea
+            name="text"
+            id="tweet-text"
+            placeholder="What are you humming about?"
+          ></textarea>
           <div>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>

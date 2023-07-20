@@ -13,14 +13,13 @@
 
 #logo {
   font-family: "Bungee", sans-serif;
-  font-size: 55px;
-  margin: 0.2em 0em 0em;
+  font-size: 4rem;
 }
 
 #tweet-toggle {
   text-decoration: none;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 2rem;
   margin-top: 0.2em;
 }
 
@@ -28,7 +27,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 215px;
 }
+
+/* .logobox {
+  display: flex;
+  height: 35%;
+  width: 10%;
+} */
 
 #write-new-tweet-arrow {
   color: #ff0000;
@@ -55,4 +61,18 @@
   50% {
     top: 5px;
   } /* The position at the midpoint of the animation */
+}
+
+@media only screen and (max-width: 630px) {
+  #logo {
+    font-size: 3rem;
+  }
+
+  #tweet-toggle {
+    font-size: 1rem;
+  }
+
+  .nav div {
+    min-width: 50px;
+  }
 }
