@@ -1,8 +1,11 @@
 
 $(document).ready(function () {
+  // hidden elements on load
   $(".new-tweet").hide();
-  $(".error").empty().hide();
+  $(".error").hide();
 
+
+  // "TWEET" button event handling
   $(".new-tweet").on("submit", function (event) {
     event.preventDefault();
 
@@ -10,31 +13,27 @@ $(document).ready(function () {
     const tweetVal = textareaElm.val();
     const tweetLength = tweetVal.length;
     
+    // making sure error element is hidden if it was previously visible 
     $(".error").empty().hide();
 
+    // validate form submission
     const isValid = formValidator(tweetLength, tweetVal);
-
     if (!isValid) {
       return;
     }
 
     const formData = $(textareaElm).serialize();
 
-    $.ajax({
-      method: "POST",
-      url: "/tweets",
-      data: formData,
-    }).then((response) => {
-      textareaElm.val("");
-      loadTweets();
-    });
+    postTweet(formData);
   });
 
+  // "Write a new tweet" event handling
   $("#tweet-toggle").on("click", function(event) {
     event.preventDefault();
     toggleNewTweet();
   });
 
+
+  // load existing tweets on first page load
   loadTweets();
-  setInterval(loadTweets(), 10000);
 });
