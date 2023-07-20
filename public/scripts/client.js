@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   // hidden elements on load
   $(".new-tweet").hide();
@@ -24,7 +23,7 @@ $(document).ready(function () {
 
     const formData = $(textareaElm).serialize();
 
-    postTweet(formData);
+    postTweet(formData, textareaElm);
   });
 
   // "Write a new tweet" event handling

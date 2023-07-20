@@ -76,7 +76,7 @@ const loadTweets = function () {
  * This function is used to post tweets by making an ajax POST request to /tweets
  * @param {string} tweetText - a serialized string that contains the tweets contents
  */
-const postTweet = function(tweetText) {
+const postTweet = function(tweetText, textareaElm) {
   $.ajax({
     method: "POST",
     url: "/tweets",

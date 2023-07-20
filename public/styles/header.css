@@ -14,28 +14,3 @@ header h1 {
   color: #fbf4ed;
 }
 
-@media only screen and (max-width: 630px) {
-  header {
-    height: 420px;
-  }
-
-  header img {
-    height: 140px;
-    width: 140px;
-  }
-}
-
-@media only screen and (max-height: 500px) {
-  header {
-    height: 320px;
-  }
-
-  header img {
-    height: 100px;
-    width: 100px;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-}

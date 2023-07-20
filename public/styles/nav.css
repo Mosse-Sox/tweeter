@@ -30,12 +30,6 @@
   min-width: 215px;
 }
 
-/* .logobox {
-  display: flex;
-  height: 35%;
-  width: 10%;
-} */
-
 #write-new-tweet-arrow {
   color: #ff0000;
   position: relative;
@@ -63,16 +57,3 @@
   } /* The position at the midpoint of the animation */
 }
 
-@media only screen and (max-width: 630px) {
-  #logo {
-    font-size: 3rem;
-  }
-
-  #tweet-toggle {
-    font-size: 1rem;
-  }
-
-  .nav div {
-    min-width: 50px;
-  }
-}
