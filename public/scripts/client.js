@@ -1,4 +1,7 @@
+
 $(document).ready(function () {
+  $(".new-tweet").hide();
+
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -91,6 +94,11 @@ $(document).ready(function () {
       textareaElm.val("");
       loadTweets();
     });
+  });
+
+  $("#tweet-toggle").on("click", function(event) {
+    event.preventDefault();
+    toggleNewTweet();
   });
 
   loadTweets();

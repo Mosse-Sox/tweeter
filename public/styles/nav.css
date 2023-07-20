@@ -17,7 +17,7 @@
   margin: 0.2em 0em 0em;
 }
 
-.nav a {
+#tweet-toggle {
   text-decoration: none;
   color: #ffffff;
   font-size: 30px;
@@ -28,4 +28,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#write-new-tweet-arrow {
+  color: #ff0000;
+  position: relative;
+}
+
+#write-new-tweet-arrow:hover {
+  animation-name: arrow-bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+#tweet-toggle:hover ~ #write-new-tweet-arrow {
+  animation-name: arrow-bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow-bounce {
+  0%,
+  100% {
+    top: 0;
+  } /* Start and end position */
+  50% {
+    top: 5px;
+  } /* The position at the midpoint of the animation */
 }
