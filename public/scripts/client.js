@@ -64,20 +64,22 @@ $(document).ready(function () {
     if (tweetLength > 140) {
       $(".error").empty();
       $(".error").append(
-        "<p style='color: red'><strong>Tweet is too long!<strong></p>"
-      );
+        `<span><i class="fa-solid fa-triangle-exclamation"></i><strong> Tweet is too long! <strong><i class="fa-solid fa-triangle-exclamation"></i></span>`
+      ).hide();
+      $(".error").slideDown();
       return;
     }
 
     if (!textareaElm.val()) {
-      $(".error").empty();
+      $(".error").empty().hide;
       $(".error").append(
-        "<p style='color: red'><strong>Tweet is too empty!<strong></p>"
-      );
+        `<span><i class="fa-solid fa-triangle-exclamation"></i><strong> Tweet is too empty! <strong><i class="fa-solid fa-triangle-exclamation"></i></span>`
+      ).hide();
+      $(".error").slideDown();
       return;
     }
 
-    $(".error").empty();
+    $(".error").empty().hide();
 
     const formData = $(textareaElm).serialize();
 
