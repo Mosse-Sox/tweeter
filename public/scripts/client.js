@@ -43,7 +43,6 @@ $(document).ready(function () {
       method: "GET",
       url: "/tweets",
       success: (tweets) => {
-        console.log(tweets);
         renderTweets($("#tweets-container"), tweets);
       },
     });
@@ -53,16 +52,35 @@ $(document).ready(function () {
     event.preventDefault();
 
     const textareaElm = $(this).find("textarea#tweet-text");
+    const tweetLength = textareaElm.val().length;
+
+    if (tweetLength > 140) {
+      $(".error").empty();
+      $(".error").append(
+        "<p style='color: red'><strong>Tweet is too long!<strong></p>"
+      );
+      return;
+    }
+
+    if (!textareaElm.val()) {
+      $(".error").empty();
+      $(".error").append(
+        "<p style='color: red'><strong>Tweet is too empty!<strong></p>"
+      );
+      return;
+    }
+
+    $(".error").empty();
+
     const formData = $(textareaElm).serialize();
 
     $.ajax({
       method: "POST",
       url: "/tweets",
       data: formData,
-    }).then((response) => {
-      console.log(response);
-    });
+    }).then((response) => {});
 
+    textareaElm.val("");
     loadTweets();
   });
 
