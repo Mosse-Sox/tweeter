@@ -1,6 +1,7 @@
 
 $(document).ready(function () {
   $(".new-tweet").hide();
+  $(".error").empty().hide();
 
   $(".new-tweet").on("submit", function (event) {
     event.preventDefault();

@@ -36,14 +36,18 @@ form div {
 }
 
 .error span {
-  color: red;
-  border: 3px solid red;
+  color: #ff0000;
   padding: 20px;
 }
 
 .error {
   padding: 20px;
   margin: 40px 0 0 0;
+  border: 3px solid red;
+  background-color: #ed1d1d35;
+  width: 40%;
+  display: flex;
+  justify-content: center;
 }
 
 div output {
