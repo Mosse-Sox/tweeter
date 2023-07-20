@@ -22,7 +22,8 @@ $(document).ready(function () {
         <i class="fa-solid fa-heart"></i>
       </div>
     </footer>
-  </article>`;
+  </article>
+  <br>`;
 
     return $tweet;
   };

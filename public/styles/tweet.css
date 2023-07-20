@@ -1,12 +1,13 @@
+/* section housing all articles */
 #tweets-container {
   width: 60%;
-  height: 1000px;
   display: flex;
   flex-direction: column;
   margin: 15px;
-  overflow-y: auto;
+  justify-content: space-between;
 }
 
+/* articles house all the individual tweets contents */
 #tweets-container article {
   display: flex;
   flex-direction: column;
@@ -14,7 +15,7 @@
   width: 100%;
   justify-content: space-between;
   border: 3px solid #545149;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 #tweets-container article header {
@@ -87,7 +88,6 @@
 }
 
 /* Hover States */
-
 #tweets-container article:hover {
   box-shadow: 10px 10px #5451492c;
 }
