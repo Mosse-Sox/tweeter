@@ -30,6 +30,7 @@ $(document).ready(function () {
 
   const renderTweets = function (container, tweets) {
     container.empty();
+    $(".counter").html(140);
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       container.prepend($tweet);
@@ -78,11 +79,12 @@ $(document).ready(function () {
       method: "POST",
       url: "/tweets",
       data: formData,
-    }).then((response) => {});
-
-    textareaElm.val("");
-    loadTweets();
+    }).then((response) => {
+      textareaElm.val("");
+      loadTweets();
+    });
   });
 
   loadTweets();
+  setInterval(loadTweets(), 10000);
 });
