@@ -28,10 +28,13 @@ $(document).ready(function () {
   };
 
   const renderTweets = function (container, tweets) {
+    container.empty();
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       container.prepend($tweet);
     }
+
+    container.find(".timeago").timeago();
   };
 
   const loadTweets = function () {
@@ -60,9 +63,7 @@ $(document).ready(function () {
     });
 
     loadTweets();
-    $(".timeago").timeago();
   });
 
   loadTweets();
-  $(".timeago").timeago();
 });
