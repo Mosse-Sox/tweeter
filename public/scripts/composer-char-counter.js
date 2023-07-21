@@ -13,6 +13,8 @@ $(document).ready(function () {
     const counter = $(this).find(".counter");
     if (0 > charsLeft) {
       counter.css("color", "#FF0000");
+    } else {
+      counter.css("color", "#545149");
     }
 
     counter.html(charsLeft);
