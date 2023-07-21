@@ -48,10 +48,12 @@
 }
 
 @keyframes arrow-bounce {
-  0%, 100% {
+  0%,
+  100% {
     top: 0;
   } /* Start and end position */
   50% {
     top: 5px;
   } /* The position at the midpoint of the animation */
 }
+

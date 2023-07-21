@@ -90,29 +90,9 @@
 
 /* Hover States */
 #tweets-container article:hover {
-  box-shadow: 10px 10px rgba(84, 81, 73, 0.1725490196);
+  box-shadow: 10px 10px #5451492c;
 }
 
 #tweets-container footer div i:hover {
   color: #dfb128;
-}
-
-.scroll-to-top {
-  display: none;
-  position: fixed;
-  background-color: #ff0000;
-  border: none;
-  right: 1.5rem;
-  bottom: 2.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  justify-items: center;
-}
-
-#scroll-to-top:hover {
-  background-color: #4c7cd5;
 }
