@@ -3,6 +3,12 @@ $(document).ready(function () {
   $(".new-tweet").hide();
   $(".error").hide();
 
+  // input even handling for counter on composer
+  $(".new-tweet").on("input", () => {
+    const counter = $(this).find(".counter");
+    const textareaElm = $(this).find("textarea#tweet-text");
+    composerCounter(counter, textareaElm);
+  });
 
   // "TWEET" button event handling
   $(".new-tweet").on("submit", function (event) {
