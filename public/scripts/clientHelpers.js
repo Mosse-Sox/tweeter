@@ -1,9 +1,9 @@
 /**
  * This function is used to convert an untrusted into a trusted one
- * @param {string} str 
+ * @param {string} str
  * @returns a safe/trusted version of the users input as a string
  */
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -11,10 +11,10 @@ const escape = function (str) {
 
 /**
  * This function simply constructs the tweet and then returns the jQuery object representing that tweet.
- * @param {Object} tweet 
+ * @param {Object} tweet
  * @returns returns a jQuery object representing a tweet
  */
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
   const tweetTimeAgo = new Date(tweet.created_at).toISOString();
 
   const $tweet = `<article>
@@ -48,7 +48,7 @@ const createTweetElement = function (tweet) {
  * @param {jQuery Object} container - container to prepend the tweets to
  * @param {Array} tweets - array of tweets to render
  */
-const renderTweets = function (container, tweets) {
+const renderTweets = function(container, tweets) {
   container.empty();
   $(".counter").html(140);
   for (const tweet of tweets) {
@@ -62,7 +62,7 @@ const renderTweets = function (container, tweets) {
 /**
  * This function is used to load tweets onto the page using ajax and calling renderTweets
  */
-const loadTweets = function () {
+const loadTweets = function() {
   $.ajax({
     method: "GET",
     url: "/tweets",
@@ -85,15 +85,15 @@ const postTweet = function(tweetText, textareaElm) {
     textareaElm.val("");
     loadTweets();
   });
-}
+};
 
 /**
  * This function is used to validate form entries
- * @param {number} tweetLength 
- * @param {string} textareaElmValue 
+ * @param {number} tweetLength
+ * @param {string} textareaElmValue
  * @returns true or false depending on if the tweet entry was valid or not
  */
-const formValidator = function (tweetLength, textareaElmValue) {
+const formValidator = function(tweetLength, textareaElmValue) {
   $(".error").empty(); // Clear any existing error messages
 
   if (tweetLength > 140) {
@@ -109,10 +109,10 @@ const formValidator = function (tweetLength, textareaElmValue) {
 
 /**
  * @param {boolean} length - true or false depending on if a tweet is too long
- * @param {boolean} value - true or false depending on if a tweet didnt have any contents 
+ * @param {boolean} value - true or false depending on if a tweet didnt have any contents
  * This function produces the error messages by appending them to the element with the error class
  */
-const formError = function (length, value) {
+const formError = function(length, value) {
   if (length) {
     $(".error")
       .append(
@@ -120,18 +120,18 @@ const formError = function (length, value) {
       )
       .hide()
       .slideDown();
-      $('.new-tweet').css('height', '280px');
-      return;
+    $(".new-tweet").css("height", "280px");
+    return;
   }
 
   if (value) {
     $(".error")
-    .append(
-      `<span><i class="fa-solid fa-triangle-exclamation"></i><strong> Tweet is too empty! <strong><i class="fa-solid fa-triangle-exclamation"></i></span>`
-    )
-    .hide()
-    .slideDown();
-    $('.new-tweet').css('height', '280px');
+      .append(
+        `<span><i class="fa-solid fa-triangle-exclamation"></i><strong> Tweet is too empty! <strong><i class="fa-solid fa-triangle-exclamation"></i></span>`
+      )
+      .hide()
+      .slideDown();
+    $(".new-tweet").css("height", "280px");
     return;
   }
 };

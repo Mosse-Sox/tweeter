@@ -3,7 +3,7 @@
  * @param {jQuery element} counter this is the counter that counts down how many chars are left in a tweets char limit
  * @param {jQuery element} textareaElm this is the textarea that the user is inputing their tweets contents
  */
-const composerCounter = function (counter, textareaElm) {
+const composerCounter = function(counter, textareaElm) {
   const textareaValue = textareaElm.val();
   const textareaLength = textareaValue.length;
 
