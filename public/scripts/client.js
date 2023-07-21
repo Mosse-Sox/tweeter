@@ -33,6 +33,12 @@ $(document).ready(function () {
     toggleNewTweet();
   });
 
+  // check y axis of document and decide to show scroll up button or not
+  $("#tweets-container").on("scroll", checkScrollPosition);
+
+  // when scroll up is clicked, the page will scroll to the top
+  $("#scroll-to-top").on("click", scrollToTop);
+
 
   // load existing tweets on first page load
   loadTweets();
