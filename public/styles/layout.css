@@ -39,6 +39,72 @@ body {
   flex-direction: column;
 }
 
+@media only screen and (max-width: 630px) {
+  #logo {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  #tweet-toggle {
+    font-size: 2rem;
+  }
+
+  .nav div {
+    min-width: 50px;
+    height: 100px;
+  }
+
+  header {
+    height: 350px;
+  }
+
+  header img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .nav {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .logobox {
+    padding: 0;
+  }
+
+  #tweets-container article {
+    height: 200px;
+    overflow-y: scroll;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  header {
+    height: 320px;
+  }
+
+  header img {
+    height: 100px;
+    width: 100px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-height: 380px) and (max-width: 380) {
+  .togglebox {
+    visibility: none;
+    background-color: red;
+  }
+}
+
 /* Laptops / Desktops: minimum width of 1024px */
 @media only screen and (min-width: 1024px) {
   body {
