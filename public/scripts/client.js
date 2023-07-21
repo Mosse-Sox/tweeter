@@ -14,6 +14,7 @@ $(document).ready(function () {
     
     // making sure error element is hidden if it was previously visible 
     $(".error").empty().hide();
+    $('.new-tweet').css('height', '150px');
 
     // validate form submission
     const isValid = formValidator(tweetLength, tweetVal);

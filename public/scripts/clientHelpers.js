@@ -114,20 +114,24 @@ const formValidator = function (tweetLength, textareaElmValue) {
  */
 const formError = function (length, value) {
   if (length) {
-    return $(".error")
+    $(".error")
       .append(
         `<span><i class="fa-solid fa-triangle-exclamation"></i><strong> Tweet is too long! <strong><i class="fa-solid fa-triangle-exclamation"></i></span>`
       )
       .hide()
       .slideDown();
+      $('.new-tweet').css('height', '280px');
+      return;
   }
 
   if (value) {
-    return $(".error")
+    $(".error")
     .append(
       `<span><i class="fa-solid fa-triangle-exclamation"></i><strong> Tweet is too empty! <strong><i class="fa-solid fa-triangle-exclamation"></i></span>`
     )
     .hide()
     .slideDown();
+    $('.new-tweet').css('height', '280px');
+    return;
   }
 };

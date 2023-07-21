@@ -66,13 +66,11 @@ body {
 
   .new-tweet {
     padding: 0;
-    height: 170px;
+    height: 150px;
     background-color: #f9e3c0;
-    
   } 
 
   #tweets-container {
-    padding-top: 50px;
     height: 800px;
     overflow-y: scroll;
   }
