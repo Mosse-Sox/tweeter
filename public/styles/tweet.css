@@ -7,7 +7,6 @@
   justify-content: space-between;
 }
 
-/* articles house all the individual tweets contents */
 #tweets-container article {
   display: flex;
   flex-direction: column;
@@ -18,7 +17,6 @@
   margin-bottom: 20px;
   overflow-wrap: break-word;
 }
-
 #tweets-container article header {
   background-color: #f9e3c0;
   flex-direction: row;
@@ -29,8 +27,6 @@
   padding: 0 10px;
   align-items: center;
 }
-
-/* article header css */
 #tweets-container article header div {
   display: flex;
   flex-direction: row;
@@ -38,39 +34,31 @@
   padding: 0;
   margin: 0;
 }
-
-#tweets-container img {
+#tweets-container article header p {
+  font-weight: 600;
+  margin-right: 10px;
+  color: #bbc0cb;
+}
+#tweets-container article header img {
   height: 50px;
   width: 50px;
 }
-
-#tweets-container h4 {
+#tweets-container article header h4 {
   padding: 0;
   padding-top: 15px;
   margin: 0 5px;
   font-weight: 300;
 }
-
-#tweets-container header p {
-  font-weight: 600;
-  margin-right: 10px;
-  color: #bbc0cb;
+#tweets-container article .tweet {
+  padding: 0px 1em;
+  margin: 25px 0px;
 }
-
-/* article content css */
 #tweets-container article hr {
   width: 98%;
   border: 2px solid #545149;
   margin: 0 auto;
 }
-
-.tweet {
-  padding: 0px 1em;
-  margin: 25px 0px;
-}
-
-/* article footer css */
-#tweets-container footer {
+#tweets-container article footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -78,12 +66,10 @@
   font-size: 18px;
   padding: 5px 1em;
 }
-
-#tweets-container footer div {
+#tweets-container article footer div {
   color: #4c7cd5;
 }
-
-#tweets-container p {
+#tweets-container article footer p {
   margin: 0;
 }
 

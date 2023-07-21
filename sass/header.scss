@@ -9,9 +9,10 @@ header {
   @include cen-col-without-justify;
 }
 
-header h1 {
-  padding: 0;
-  margin-top: 0;
-  color: #fbf4ed;
+header {
+  h1 {
+    padding: 0;
+    margin-top: 0;
+    color: #fbf4ed;
+  }
 }
-

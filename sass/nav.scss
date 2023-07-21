@@ -12,26 +12,28 @@
   top: 0;
 }
 
-#logo {
-  font-family: $funky-text;
-  font-size: 4rem;
-}
+nav {
+  div {
+    @include cen-col-without-justify;
+    min-width: 215px;
+  }
 
-#tweet-toggle {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 2rem;
-  margin-top: 0.2em;
-}
+  h1 {
+    font-family: $funky-text;
+    font-size: 4rem;
+  }
 
-.nav div {
-  @include cen-col-without-justify;
-  min-width: 215px;
-}
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-top: 0.2em;
+  }
 
-#write-new-tweet-arrow {
-  color: #ff0000;
-  position: relative;
+  #write-new-tweet-arrow {
+    color: #ff0000;
+    position: relative;
+  }
 }
 
 #write-new-tweet-arrow:hover {
@@ -55,4 +57,3 @@
     top: 5px;
   } /* The position at the midpoint of the animation */
 }
-

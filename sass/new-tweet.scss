@@ -6,21 +6,25 @@
   width: 90%;
 }
 
-.new-tweet form {
-  @include flex-column;
-  width: 100%;
-  margin-top: 40px;
+.new-tweet {
+  form {
+    @include flex-column;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  button {
+    font-family: $funky-text;
+    background-color: $accent-color;
+    color: #ffffff;
+    border: none;
+  }
 }
 
-form div {
-  @include row-space-between;
-}
-
-.new-tweet button {
-  font-family: $funky-text;
-  background-color: $accent-color;
-  color: #ffffff;
-  border: none;
+form {
+  div {
+    @include row-space-between;
+  }
 }
 
 #tweet-text {
@@ -33,9 +37,11 @@ form div {
   margin-bottom: 0.3em;
 }
 
-.error span {
-  color: #ff0000;
-  padding: 0 20px;
+.error {
+  span {
+    color: #ff0000;
+    padding: 0 20px;
+  }
 }
 
 .error {

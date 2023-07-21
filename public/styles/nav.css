@@ -11,26 +11,23 @@
   top: 0;
 }
 
-#logo {
-  font-family: "Bungee", sans-serif;
-  font-size: 4rem;
-}
-
-#tweet-toggle {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 2rem;
-  margin-top: 0.2em;
-}
-
-.nav div {
+nav div {
   align-items: center;
   display: flex;
   flex-direction: column;
   min-width: 215px;
 }
-
-#write-new-tweet-arrow {
+nav h1 {
+  font-family: "Bungee", sans-serif;
+  font-size: 4rem;
+}
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2rem;
+  margin-top: 0.2em;
+}
+nav #write-new-tweet-arrow {
   color: #ff0000;
   position: relative;
 }

@@ -11,18 +11,17 @@
   width: 100%;
   margin-top: 40px;
 }
-
-form div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .new-tweet button {
   font-family: "Bungee", sans-serif;
   background-color: #4c7cd5;
   color: #ffffff;
   border: none;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #tweet-text {
