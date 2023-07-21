@@ -93,8 +93,8 @@ body {
   }
   .container {
     width: 60%;
-    display: flex;
     align-items: center;
+    display: flex;
     flex-direction: column;
     flex-grow: 2;
     height: 1000px;
@@ -118,8 +118,4 @@ body {
     min-height: 250px;
     max-width: 1000px;
   }
-}
-/* Laptops / Desktops: minimum width of 960px */
-@media only screen and (min-width: 960px) {
-  /* Write CSS rules that target small laptop screen sizes and beyond */
 }

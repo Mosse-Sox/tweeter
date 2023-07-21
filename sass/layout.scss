@@ -23,7 +23,7 @@ body {
   color: $foreground-color;
   background-color: $background-color;
   font-size: 24px;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: $main-text;
   font-weight: $font-light;
   @include cenetered-column;
 }
@@ -95,9 +95,7 @@ body {
 
   .container {
     width: 60%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include cen-col-without-justify;
     flex-grow: 2;
     height: 1000px;
   }
@@ -112,7 +110,7 @@ body {
   .new-tweet {
     padding: 0;
     height: 150px;
-    background-color: #f9e3c0;
+    background-color: $background-color;
   }
 
   #tweets-container {
@@ -124,9 +122,4 @@ body {
     min-height: 250px;
     max-width: 1000px;
   }
-}
-
-/* Laptops / Desktops: minimum width of 960px */
-@media only screen and (min-width: 960px) {
-  /* Write CSS rules that target small laptop screen sizes and beyond */
 }

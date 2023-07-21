@@ -1,3 +1,6 @@
+@import "constants";
+@import "mixins";
+
 .scroll-to-top {
   display: none;
   position: fixed;
@@ -15,5 +18,5 @@
 }
 
 #scroll-to-top:hover {
-  background-color: #4c7cd5;
+  background-color: $accent-color;
 }

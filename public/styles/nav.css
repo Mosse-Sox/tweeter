@@ -24,9 +24,9 @@
 }
 
 .nav div {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   min-width: 215px;
 }
 

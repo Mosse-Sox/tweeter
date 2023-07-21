@@ -1,27 +1,27 @@
+@import "constants";
+@import "mixins";
+
 /* section housing all articles */
 #tweets-container {
   width: 90%;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   margin: 10px;
   justify-content: space-between;
 }
 
 /* articles house all the individual tweets contents */
 #tweets-container article {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   height: 270px;
   width: 100%;
   justify-content: space-between;
-  border: 3px solid #545149;
+  border: 3px solid $foreground-color;
   margin-bottom: 20px;
   overflow-wrap: break-word;
 }
 
 #tweets-container article header {
-  background-color: #f9e3c0;
-  background-image: none;
+  background-color: $background-color;
   flex-direction: row;
   width: 100%;
   height: 50px;
@@ -33,11 +33,8 @@
 
 /* article header css */
 #tweets-container article header div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
+  @include row-space-between;
+  @include reset;
 }
 
 #tweets-container img {
@@ -53,7 +50,7 @@
 }
 
 #tweets-container header p {
-  font-weight: 600;
+  font-weight: $font-heavy;
   margin-right: 10px;
   color: #bbc0cb;
 }
@@ -61,7 +58,7 @@
 /* article content css */
 #tweets-container article hr {
   width: 98%;
-  border: 2px solid #545149;
+  border: 2px solid $foreground-color;
   margin: 0 auto;
 }
 
@@ -72,16 +69,14 @@
 
 /* article footer css */
 #tweets-container footer {
-  display: flex;
-  flex-direction: row;
+  @include row-space-between;
   height: 25%;
   font-size: 18px;
-  justify-content: space-between;
   padding: 5px 1em;
 }
 
 #tweets-container footer div {
-  color: #4c7cd5;
+  color: $accent-color;
 }
 
 #tweets-container p {
